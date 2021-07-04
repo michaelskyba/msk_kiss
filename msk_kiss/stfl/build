@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+# Find the correct ncures location.
+sed -i "s/<ncursesw\//</" stfl_internals.h
+
+make
+make DESTDIR="$1"
