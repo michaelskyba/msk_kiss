@@ -2,6 +2,7 @@
 
 # Check if a package is in your repos
 # usage: kiss grep <package>
+# you will need to use "kiss-grep" instead of "kiss grep" if using special characters
 
 dirs=$(echo $KISS_PATH | tr ':' ' ')
-find $dirs -maxdepth 1 | grep "$1"
+find $dirs -maxdepth 1 | grep --color "$1"
