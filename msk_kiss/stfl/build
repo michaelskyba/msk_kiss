@@ -4,4 +4,4 @@
 sed -i "s/<ncursesw\//</" stfl_internals.h
 
 make
-make DESTDIR="$1"
+make DESTDIR="$1" install
