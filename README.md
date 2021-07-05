@@ -11,6 +11,7 @@ msk_kiss: My personal KISS repository
 	- util-linux for /usr/bin/flock
 - xbindkeys-git
 - unclutter-xfixes-git
+- aspell
 
 ## Exports (binary packages):
 - llvm (backup)
