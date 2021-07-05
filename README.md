@@ -14,6 +14,7 @@ msk_kiss: My personal KISS repository
 - aspell
 - libxml-parser-perl
 - intltool
+- libqalculate
 
 ## Exports (binary packages):
 - llvm (backup)
