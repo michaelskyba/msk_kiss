@@ -9,6 +9,7 @@ msk_kiss: My personal KISS repository
 - clipmenu-git (you need to use a few kiss alternatives to busybox)
 	- procps-ng for /usr/bin/pgrep
 	- util-linux for /usr/bin/flock
+- xbindkeys-git
 
 ## Exports (binary packages):
 - llvm (backup)
