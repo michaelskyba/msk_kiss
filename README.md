@@ -12,6 +12,7 @@ msk_kiss: My personal KISS repository
 - xbindkeys-git
 - unclutter-xfixes-git
 - aspell
+- libxml-parser-perl
 
 ## Exports (binary packages):
 - llvm (backup)
