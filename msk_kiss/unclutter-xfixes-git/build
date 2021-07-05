@@ -1,0 +1,10 @@
+#!/bin/sh -e
+# Remove asciidoc dependency by purging documentation.
+sed -i 's/^all: clean $(TARGET) mans$/all: clean $(TARGET)/' Makefile
+sed -i 's/^install: $(TARGET) mans$/install: $(TARGET)/' Makefile
+sed -i "/man/d" Makefile
+
+rm -rf man
+
+make
+make DESTDIR="$1" install

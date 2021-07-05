@@ -10,6 +10,7 @@ msk_kiss: My personal KISS repository
 	- procps-ng for /usr/bin/pgrep
 	- util-linux for /usr/bin/flock
 - xbindkeys-git
+- unclutter-xfixes-git
 
 ## Exports (binary packages):
 - llvm (backup)
