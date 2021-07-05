@@ -13,6 +13,7 @@ msk_kiss: My personal KISS repository
 - unclutter-xfixes-git
 - aspell
 - libxml-parser-perl
+- intltool
 
 ## Exports (binary packages):
 - llvm (backup)
