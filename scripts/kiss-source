@@ -1,0 +1,25 @@
+#!/bin/sh -ef
+
+# Output the sources file of a package (useful for locating the upstream url)
+# e.g. I see a "gping" package, and want to know what the GitHub repo is
+# usage: kiss source <package>
+
+dirs=$(echo $KISS_PATH | tr ':' ' ')
+
+# In each directory, we need to check if the package exists.
+for dir in $dirs
+do
+	cd "$dir"
+
+	find_output=$(find -name "$1")
+	[ $find_output ] && break
+done
+
+# Once found, we can output the sources to the user.
+
+find_output=${find_output#./}
+file="$dir/$find_output/sources"
+
+echo "file: $file"
+echo
+cat "$file"
