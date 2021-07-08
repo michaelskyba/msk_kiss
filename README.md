@@ -15,6 +15,7 @@ msk_kiss: My personal KISS repository
 - libxml-parser-perl
 - intltool
 - libqalculate
+- py-sip4
 
 ## Exports (binary packages):
 - llvm (backup)
