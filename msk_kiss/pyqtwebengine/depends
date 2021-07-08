@@ -1,5 +1,4 @@
+py-sip make
 pyqt5
-pyqtwebengine
 python
-qt5
 qt5-webengine

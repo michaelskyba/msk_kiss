@@ -1,0 +1,8 @@
+#!/bin/sh -e
+python configure.py \
+    --confirm-license
+
+# We build race-conditions into our projects for fun!
+# Build single threaded to avoid
+make
+make -j1 INSTALL_ROOT="$1" install
