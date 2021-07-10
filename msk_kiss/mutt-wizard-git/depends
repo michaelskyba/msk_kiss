@@ -1,0 +1,10 @@
+neomutt
+curl make
+isync
+msmtp
+pass make
+
+# The following are optional; I listed them here for convenience
+# Delete them from this file if unnecessary
+urlview
+lynx
