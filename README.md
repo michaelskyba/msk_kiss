@@ -19,6 +19,7 @@ msk_kiss: My personal KISS repository
 - mutt-wizard-git
     - I have added "lynx" and "urlview" as depencies, even though they are, in reality, optional
     - Modify the 'depends' file if they aren't required
+- bombadillo-git
 
 ## Exports (binary packages):
 - llvm (backup)
