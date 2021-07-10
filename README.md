@@ -15,7 +15,7 @@ msk_kiss: My personal KISS repository
 - libxml-parser-perl
 - intltool
 - libqalculate
-- py-sip4
+- py-sip
 - mutt-wizard-git
     - I have added "lynx" and "urlview" as depencies, even though they are, in reality, optional
     - Modify the 'depends' file if they aren't required

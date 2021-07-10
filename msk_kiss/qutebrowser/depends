@@ -1,6 +1,5 @@
 pyqt5
-pyqtwebengine
-py-sip4
+py-sip
 python
 qt5
 qt5-webengine

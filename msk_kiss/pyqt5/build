@@ -1,7 +1,5 @@
 #!/bin/sh -e
 sip-build --no-make --no-dbus-python --confirm-license
-# python configure.py \
-    # --confirm-license
 
 cd build
 make

@@ -1,7 +1,7 @@
 python
 gcc
 mesa
-py-sip4
+py-sip
 qt5
 qt5-svg
 qt5-declarative
