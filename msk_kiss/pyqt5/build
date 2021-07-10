@@ -1,8 +1,10 @@
 #!/bin/sh -e
-python configure.py \
-    --confirm-license
+sip-build --no-make --no-dbus-python --confirm-license
+# python configure.py \
+    # --confirm-license
 
-# We build race-conditions into our projects for fun!
-# Build single threaded to avoid
+cd build
 make
-make -j1 INSTALL_ROOT="$1" install
+
+# idk, hopefully one of them works
+make -j1 INSTALL_ROOT="$1" DESTDIR="$1" install

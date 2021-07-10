@@ -1,5 +1,9 @@
 python
+gcc
+mesa
 py-sip4
 qt5
+qt5-svg
 qt5-declarative
 qt5-webchannel
+qt5-x11extras

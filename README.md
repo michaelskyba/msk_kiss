@@ -20,6 +20,7 @@ msk_kiss: My personal KISS repository
     - I have added "lynx" and "urlview" as depencies, even though they are, in reality, optional
     - Modify the 'depends' file if they aren't required
 - bombadillo-git
+- pyqt5 (I think)
 
 ## Exports (binary packages):
 - llvm (backup)
