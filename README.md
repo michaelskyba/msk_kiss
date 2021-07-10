@@ -16,6 +16,9 @@ msk_kiss: My personal KISS repository
 - intltool
 - libqalculate
 - py-sip4
+- mutt-wizard-git
+    - I have added "lynx" and "urlview" as depencies, even though they are, in reality, optional
+    - Modify the 'depends' file if they aren't required
 
 ## Exports (binary packages):
 - llvm (backup)
