@@ -24,6 +24,10 @@ Don't take this is an accurate representation of my git commiting skills; due to
 - bombadillo-git
 - pyqt5 (I think)
 - gcolor3-git
+- pyqtwebengine
+- qutebrowser-git (finally)
+	- Credit to https://github.com/sdsddsd1, I used their packages as a base for qutebrowser and its dependencies
+	- The build file removes the dbus dependency, but also breaks support for web notifications (which I don't need)
 
 ## Exports (binary packages):
 - llvm (backup)
@@ -36,5 +40,5 @@ Don't take this is an accurate representation of my git commiting skills; due to
 	- if using, make sure /path/to/msk_kiss/scripts is before /usr/bin/ in your $PATH
 - kiss-source - quickly output the sources of a package
 
-## My kernel configuration for some hardware
+## My kernel configuration Tor some hardware
 - hp-elitebook-8470p
