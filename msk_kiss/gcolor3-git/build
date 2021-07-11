@@ -1,0 +1,4 @@
+#!/bin/sh -e
+meson build
+ninja -C build
+ninja -C build datadir="$1" prefix=/usr install
