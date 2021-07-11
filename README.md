@@ -21,6 +21,7 @@ msk_kiss: My personal KISS repository
     - Modify the 'depends' file if they aren't required
 - bombadillo-git
 - pyqt5 (I think)
+- gcolor3-git
 
 ## Exports (binary packages):
 - llvm (backup)
