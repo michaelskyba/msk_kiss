@@ -1,6 +1,8 @@
 # msk_kiss
 msk_kiss: My personal KISS repository
 
+Don't take this is an accurate representation of my git commiting skills; due to the highly informal nature of this, the commit history will be even sloppier than usual.
+
 ## Currently 'working' packages (as of July 2021):
 - xcape-git
 - gettext
