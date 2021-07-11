@@ -28,6 +28,9 @@ Don't take this is an accurate representation of my git commiting skills; due to
 - qutebrowser-git (finally)
 	- Credit to https://github.com/sdsddsd1, I used their packages as a base for qutebrowser and its dependencies
 	- The build file removes the dbus dependency, but also breaks support for web notifications (which I don't need)
+- olm-git
+- gomuks-git
+	- I get a long set of "permission denied" errors for deleting cached files at the end of the build, and am not sure what's causing it - if you're familiar with Go, please offer some advice
 
 ## Exports (binary packages):
 - llvm (backup)
