@@ -1,5 +1,8 @@
 #!/bin/sh -e
-python configure.py
+sip-build --no-make
 
+cd build
 make
-make -j1 INSTALL_ROOT="$1" install
+
+# idk, hopefully one of them works
+make -j1 INSTALL_ROOT="$1" DESTDIR="$1" install
