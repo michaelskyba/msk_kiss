@@ -21,7 +21,6 @@ msk_kiss: My personal KISS repository
     - Modify the 'depends' file if they aren't required
 - bombadillo-git
 - pyqt5 (I think)
-- sfeed-git
 
 ## Exports (binary packages):
 - llvm (backup)
