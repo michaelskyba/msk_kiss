@@ -1,0 +1,4 @@
+#!/bin/sh -e
+export GOPATH="$PWD/go"
+go build
+install -Dm755 gomuks "$1/usr/bin/gomuks"
