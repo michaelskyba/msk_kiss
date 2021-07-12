@@ -42,6 +42,7 @@ Don't take this is an accurate representation of my git commiting skills; due to
 - kiss-new - a fork that adds some 'default(?)' commands to the build file
 	- if using, make sure /path/to/msk_kiss/scripts is before /usr/bin/ in your $PATH
 - kiss-source - quickly output the sources of a package
+- kiss-hook - you should probably just ignore this
 
 ## My kernel configuration Tor some hardware
 - hp-elitebook-8470p

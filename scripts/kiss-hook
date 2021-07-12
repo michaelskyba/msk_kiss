@@ -1,0 +1,5 @@
+#!/bin/sh
+
+case "$TYPE" in
+	pre-install) msk_message "New KISS package to install." ;;
+esac
