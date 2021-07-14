@@ -9,6 +9,7 @@ DEST=$3
 
 case $TYPE in
 	pre-build) echo "$PKG" > $HOME/source/shellscript/assets/kiss_build ;;
+	build-fail) echo "$PKG: build failed" > $HOME/source/shellscript/assets/kiss_build ;;
 
 	# -f: no error if file doesn't exist
 	post-install) rm -f $HOME/source/shellscript/assets/kiss_build ;;
