@@ -2,6 +2,11 @@
 
 # https://kisslinux.xyz/package-manager#6.0
 
+# https://github.com/kisslinux/kiss/commit/d765dbd043d5a69a15875f2cd0ff81cdaaa2d97f
+TYPE=$1
+PKG=$2
+DEST=$3
+
 case $TYPE in
 	pre-build) echo "$PKG" > $HOME/source/shellscript/assets/kiss_build ;;
 
