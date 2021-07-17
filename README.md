@@ -32,6 +32,11 @@ Don't take this is an accurate representation of my git commiting skills; due to
 - gomuks-git
 	- I get a long set of "permission denied" errors for deleting cached files at the end of the build, and am not sure what's causing it - if you're familiar with Go, please offer some advice
 
+Forks with misc fixes
+- msmtp (openssl)
+- lynx (openssl)
+- libmupdf (temporary failure)
+
 ## Exports (binary packages):
 - llvm (backup)
 - nodejs (backup)

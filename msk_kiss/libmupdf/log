@@ -1,0 +1,642 @@
+-> Resolving dependencies 
+-> Building: explicit: libmupdf 
+-> Checking for pre-built dependencies 
+-> libmupdf Checking sources
+found /home/michael/.cache/kiss/sources/libmupdf/mupdf-1.18.0-source.tar.xz
+found /home/michael/downloads/kiss/community/community/libmupdf/patches/pkcs7-fix.patch
+-> libmupdf Checking sources
+old 592d4f6c0fba41bb954eb1a41616661b62b134d5b383e33bd45a081af5d4a59a
+new 592d4f6c0fba41bb954eb1a41616661b62b134d5b383e33bd45a081af5d4a59a
+old 607776293d405188c9f1793ddbfd8b16b4c7a5f8ced18126ba2967c13cc0cca5
+new 607776293d405188c9f1793ddbfd8b16b4c7a5f8ced18126ba2967c13cc0cca5
+-> libmupdf Building package (1/1)
+-> libmupdf Extracting sources
+-> libmupdf Starting build
+patching file source/helpers/pkcs7/pkcs7-openssl.c
+    CC build/release/source/fitz/archive.o
+    CC build/release/source/fitz/bbox-device.o
+    CC build/release/source/fitz/bidi-std.o
+    CC build/release/source/fitz/bidi.o
+    CC build/release/source/fitz/bitmap.o
+    CC build/release/source/fitz/buffer.o
+    CC build/release/source/fitz/color-fast.o
+    CC build/release/source/fitz/color-icc-create.o
+    CC build/release/source/fitz/color-lcms.o
+    CC build/release/source/fitz/colorspace.o
+source/fitz/colorspace.c: In function 'fz_new_cal_gray_colorspace':
+source/fitz/colorspace.c:459:26: warning: 'fz_new_icc_data_from_cal' accessing 12 bytes in a region of size 4 [-Wstringop-overflow=]
+  459 |         fz_buffer *buf = fz_new_icc_data_from_cal(ctx, wp, bp, &gamma, NULL, 1);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/fitz/colorspace.c:459:26: note: referencing argument 4 of type 'float *'
+In file included from source/fitz/colorspace.c:3:
+source/fitz/color-imp.h:15:12: note: in a call to function 'fz_new_icc_data_from_cal'
+   15 | fz_buffer *fz_new_icc_data_from_cal(fz_context *ctx, float wp[3], float bp[3], float gamma[3], float matrix[9], int n);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~
+    CC build/release/source/fitz/compress.o
+    CC build/release/source/fitz/compressed-buffer.o
+    CC build/release/source/fitz/context.o
+    CC build/release/source/fitz/crypt-aes.o
+    CC build/release/source/fitz/crypt-arc4.o
+    CC build/release/source/fitz/crypt-md5.o
+    CC build/release/source/fitz/crypt-sha2.o
+    CC build/release/source/fitz/device.o
+    CC build/release/source/fitz/directory.o
+    CC build/release/source/fitz/document-all.o
+    CC build/release/source/fitz/document.o
+    CC build/release/source/fitz/draw-affine.o
+    CC build/release/source/fitz/draw-blend.o
+    CC build/release/source/fitz/draw-device.o
+    CC build/release/source/fitz/draw-edge.o
+    CC build/release/source/fitz/draw-edgebuffer.o
+source/fitz/draw-edgebuffer.c: In function 'fz_gap_edgebuffer':
+source/fitz/draw-edgebuffer.c:435:51: warning: 'iy2' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  435 |                         row = &eb->table[eb->index[iy]];
+      |                                                   ^
+source/fitz/draw-edgebuffer.c:704:23: note: 'iy2' was declared here
+  704 |         int iy0, iy1, iy2;
+      |                       ^~~
+    CC build/release/source/fitz/draw-glyph.o
+    CC build/release/source/fitz/draw-mesh.o
+    CC build/release/source/fitz/draw-paint.o
+    CC build/release/source/fitz/draw-path.o
+source/fitz/draw-path.c: In function 'fz_dash_lineto':
+source/fitz/draw-path.c:755:21: warning: 'old_by' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  755 |         s->seg[0].y = s->beg[0].y = y;
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+source/fitz/draw-path.c:1025:23: note: 'old_by' was declared here
+ 1025 |         float old_bx, old_by;
+      |                       ^~~~~~
+source/fitz/draw-path.c:754:21: warning: 'old_bx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  754 |         s->seg[0].x = s->beg[0].x = x;
+      |         ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+source/fitz/draw-path.c:1025:15: note: 'old_bx' was declared here
+ 1025 |         float old_bx, old_by;
+      |               ^~~~~~
+    CC build/release/source/fitz/draw-rasterize.o
+    CC build/release/source/fitz/draw-scale-simple.o
+    CC build/release/source/fitz/draw-unpack.o
+    CC build/release/source/fitz/encode-basic.o
+    CC build/release/source/fitz/encode-fax.o
+    CC build/release/source/fitz/encodings.o
+    CC build/release/source/fitz/error.o
+    CC build/release/source/fitz/filter-basic.o
+    CC build/release/source/fitz/filter-dct.o
+    CC build/release/source/fitz/filter-fax.o
+    CC build/release/source/fitz/filter-flate.o
+    CC build/release/source/fitz/filter-jbig2.o
+    CC build/release/source/fitz/filter-leech.o
+    CC build/release/source/fitz/filter-lzw.o
+    CC build/release/source/fitz/filter-predict.o
+    CC build/release/source/fitz/filter-sgi.o
+    CC build/release/source/fitz/filter-thunder.o
+    CC build/release/source/fitz/font.o
+    CC build/release/source/fitz/ftoa.o
+    CC build/release/source/fitz/geometry.o
+    CC build/release/source/fitz/getopt.o
+    CC build/release/source/fitz/glyph.o
+    CC build/release/source/fitz/halftone.o
+    CC build/release/source/fitz/harfbuzz.o
+    CC build/release/source/fitz/hash.o
+    CC build/release/source/fitz/image.o
+    CC build/release/source/fitz/jmemcust.o
+    CC build/release/source/fitz/link.o
+    CC build/release/source/fitz/list-device.o
+    CC build/release/source/fitz/load-bmp.o
+    CC build/release/source/fitz/load-gif.o
+    CC build/release/source/fitz/load-jbig2.o
+    CC build/release/source/fitz/load-jpeg.o
+    CC build/release/source/fitz/load-jpx.o
+    CC build/release/source/fitz/load-jxr.o
+    CC build/release/source/fitz/load-png.o
+    CC build/release/source/fitz/load-pnm.o
+    CC build/release/source/fitz/load-tiff.o
+    CC build/release/source/fitz/log.o
+    CC build/release/source/fitz/memento.o
+    CC build/release/source/fitz/memory.o
+    CC build/release/source/fitz/noto.o
+    CC build/release/source/fitz/ocr-device.o
+    CC build/release/source/fitz/outline.o
+    CC build/release/source/fitz/output-cbz.o
+    CC build/release/source/fitz/output-pcl.o
+    CC build/release/source/fitz/output-pclm.o
+    CC build/release/source/fitz/output-pdfocr.o
+    CC build/release/source/fitz/output-png.o
+    CC build/release/source/fitz/output-pnm.o
+    CC build/release/source/fitz/output-ps.o
+    CC build/release/source/fitz/output-psd.o
+    CC build/release/source/fitz/output-pwg.o
+    CC build/release/source/fitz/output-svg.o
+    CC build/release/source/fitz/output.o
+    CC build/release/source/fitz/path.o
+source/fitz/path.c: In function 'fz_walk_path':
+source/fitz/path.c:686:33: warning: 'y' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  686 |                                 proc->curveto(ctx, arg,
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~
+  687 |                                                 x,
+      |                                                 ~~
+  688 |                                                 y,
+      |                                                 ~~
+  689 |                                                 coords[k],
+      |                                                 ~~~~~~~~~~
+  690 |                                                 coords[k+1],
+      |                                                 ~~~~~~~~~~~~
+  691 |                                                 coords[k+2],
+      |                                                 ~~~~~~~~~~~~
+  692 |                                                 coords[k+3]);
+      |                                                 ~~~~~~~~~~~~
+source/fitz/path.c:686:33: warning: 'x' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    CC build/release/source/fitz/pixmap.o
+    CC build/release/source/fitz/pool.o
+    CC build/release/source/fitz/printf.o
+    CC build/release/source/fitz/random.o
+    CC build/release/source/fitz/separation.o
+    CC build/release/source/fitz/shade.o
+    CC build/release/source/fitz/stext-device.o
+source/fitz/stext-device.c: In function 'fz_add_stext_char_imp':
+source/fitz/stext-device.c:304:13: warning: variable 'rtl' set but not used [-Wunused-but-set-variable]
+  304 |         int rtl = 0;
+      |             ^~~
+    CC build/release/source/fitz/stext-output.o
+    CC build/release/source/fitz/stext-search.o
+    CC build/release/source/fitz/store.o
+    CC build/release/source/fitz/stream-open.o
+    CC build/release/source/fitz/stream-read.o
+    CC build/release/source/fitz/string.o
+source/fitz/string.c:159:42: warning: argument 2 of type 'char[4096]' with mismatched bound [-Warray-parameter=]
+  159 | char *fz_realpath(const char *path, char buf[PATH_MAX])
+      |                                     ~~~~~^~~~~~~~~~~~~
+In file included from include/mupdf/fitz/output.h:7,
+                 from include/mupdf/fitz.h:12,
+                 from source/fitz/string.c:1:
+include/mupdf/fitz/string-util.h:106:43: note: previously declared as 'char *'
+  106 | char *fz_realpath(const char *path, char *resolved_path);
+      |                                     ~~~~~~^~~~~~~~~~~~~
+    CC build/release/source/fitz/strtof.o
+    CC build/release/source/fitz/svg-device.o
+    CC build/release/source/fitz/test-device.o
+    CC build/release/source/fitz/text.o
+    CC build/release/source/fitz/time.o
+    CC build/release/source/fitz/trace-device.o
+    CC build/release/source/fitz/track-usage.o
+    CC build/release/source/fitz/transition.o
+    CC build/release/source/fitz/tree.o
+    CC build/release/source/fitz/ucdn.o
+    CC build/release/source/fitz/untar.o
+    CC build/release/source/fitz/unzip.o
+    CC build/release/source/fitz/util.o
+    CC build/release/source/fitz/warp.o
+    CC build/release/source/fitz/writer.o
+    CC build/release/source/fitz/xml.o
+    CC build/release/source/fitz/xmltext-device.o
+    CC build/release/source/fitz/zip.o
+    CXX build/release/source/fitz/tessocr.o
+    CC build/release/source/pdf/pdf-annot.o
+    CC build/release/source/pdf/pdf-appearance.o
+    CC build/release/source/pdf/pdf-clean-file.o
+    CC build/release/source/pdf/pdf-clean.o
+    CC build/release/source/pdf/pdf-cmap-load.o
+    CC build/release/source/pdf/pdf-cmap-parse.o
+    CC build/release/source/pdf/pdf-cmap.o
+    CC build/release/source/pdf/pdf-colorspace.o
+    CC build/release/source/pdf/pdf-crypt.o
+    CC build/release/source/pdf/pdf-device.o
+    CC build/release/source/pdf/pdf-event.o
+    CC build/release/source/pdf/pdf-font-add.o
+    CC build/release/source/pdf/pdf-font.o
+    CC build/release/source/pdf/pdf-form.o
+    CC build/release/source/pdf/pdf-function.o
+    CC build/release/source/pdf/pdf-graft.o
+    CC build/release/source/pdf/pdf-image.o
+    CC build/release/source/pdf/pdf-interpret.o
+    CC build/release/source/pdf/pdf-js.o
+    CC build/release/source/pdf/pdf-layer.o
+    CC build/release/source/pdf/pdf-lex.o
+    CC build/release/source/pdf/pdf-link.o
+    CC build/release/source/pdf/pdf-metrics.o
+    CC build/release/source/pdf/pdf-nametree.o
+    CC build/release/source/pdf/pdf-object.o
+    CC build/release/source/pdf/pdf-op-buffer.o
+    CC build/release/source/pdf/pdf-op-filter.o
+    CC build/release/source/pdf/pdf-op-run.o
+    CC build/release/source/pdf/pdf-outline.o
+    CC build/release/source/pdf/pdf-page.o
+    CC build/release/source/pdf/pdf-parse.o
+    CC build/release/source/pdf/pdf-pattern.o
+    CC build/release/source/pdf/pdf-repair.o
+    CC build/release/source/pdf/pdf-resources.o
+    CC build/release/source/pdf/pdf-run.o
+    CC build/release/source/pdf/pdf-shade.o
+    CC build/release/source/pdf/pdf-signature.o
+    CC build/release/source/pdf/pdf-store.o
+    CC build/release/source/pdf/pdf-stream.o
+    CC build/release/source/pdf/pdf-type3.o
+    CC build/release/source/pdf/pdf-unicode.o
+    CC build/release/source/pdf/pdf-util.o
+    CC build/release/source/pdf/pdf-write.o
+    CC build/release/source/pdf/pdf-xobject.o
+    CC build/release/source/pdf/pdf-xref.o
+    CC build/release/source/xps/xps-common.o
+    CC build/release/source/xps/xps-doc.o
+    CC build/release/source/xps/xps-glyphs.o
+    CC build/release/source/xps/xps-gradient.o
+    CC build/release/source/xps/xps-image.o
+    CC build/release/source/xps/xps-link.o
+    CC build/release/source/xps/xps-outline.o
+    CC build/release/source/xps/xps-path.o
+    CC build/release/source/xps/xps-resource.o
+    CC build/release/source/xps/xps-tile.o
+    CC build/release/source/xps/xps-util.o
+    CC build/release/source/xps/xps-zip.o
+    CC build/release/source/svg/svg-color.o
+    CC build/release/source/svg/svg-doc.o
+    CC build/release/source/svg/svg-parse.o
+    CC build/release/source/svg/svg-run.o
+    CC build/release/source/html/css-apply.o
+    CC build/release/source/html/css-parse.o
+    CC build/release/source/html/epub-doc.o
+    CC build/release/source/html/html-doc.o
+    CC build/release/source/html/html-font.o
+    CC build/release/source/html/html-layout.o
+    CC build/release/source/html/html-outline.o
+    CC build/release/source/html/html-parse.o
+    CC build/release/source/cbz/mucbz.o
+    CC build/release/source/cbz/muimg.o
+    OBJCOPY build/release/resources/fonts/urw/Dingbats.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusMonoPS-Bold.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusMonoPS-BoldItalic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusMonoPS-Italic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusMonoPS-Regular.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusRoman-Bold.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusRoman-BoldItalic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusRoman-Italic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusRoman-Regular.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusSans-Bold.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusSans-BoldItalic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusSans-Italic.cff.o
+    OBJCOPY build/release/resources/fonts/urw/NimbusSans-Regular.cff.o
+    OBJCOPY build/release/resources/fonts/urw/StandardSymbolsPS.cff.o
+    OBJCOPY build/release/resources/fonts/han/SourceHanSerif-Regular.ttc.o
+    OBJCOPY build/release/resources/fonts/droid/DroidSansFallback.ttf.o
+    OBJCOPY build/release/resources/fonts/droid/DroidSansFallbackFull.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoMusic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoNastaliqUrdu-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSans-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansAdlam-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansAnatolianHieroglyphs-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansArabic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansAvestan-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBamum-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBassaVah-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBatak-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBhaiksuki-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBrahmi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBuginese-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansBuhid-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCanadianAboriginal-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCarian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCaucasianAlbanian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansChakma-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCham-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCherokee-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCoptic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCuneiform-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansCypriot-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansDeseret-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansDuployan-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansEgyptianHieroglyphs-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansElbasan-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansGlagolitic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansGothic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansGrantha-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansHanunoo-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansHatran-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansImperialAramaic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansInscriptionalPahlavi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansInscriptionalParthian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansJavanese-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansKaithi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansKayahLi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansKharoshthi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansKhojki-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansKhudawadi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLepcha-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLimbu-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLinearA-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLinearB-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLisu-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLycian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansLydian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMahajani-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMandaic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansManichaean-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMarchen-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMath-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMeeteiMayek-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMendeKikakui-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMeroitic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMiao-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansModi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMongolian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMro-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansMultani-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansNKo-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansNabataean-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansNewTaiLue-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansNewa-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOgham-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOlChiki-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldHungarian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldItalic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldNorthArabian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldPermic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldPersian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldSouthArabian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOldTurkic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOsage-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOsmanya-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPahawhHmong-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPalmyrene-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPauCinHau-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPhagsPa-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPhoenician-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansPsalterPahlavi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansRejang-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansRunic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSamaritan-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSaurashtra-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSharada-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansShavian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSiddham-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSoraSompeng-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSundanese-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSylotiNagri-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSymbols-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSymbols2-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansSyriac-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTagalog-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTagbanwa-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTaiLe-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTaiViet-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTakri-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansThaana-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTifinagh-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTirhuta-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansUgaritic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansVai-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansWarangCiti-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansYi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerif-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifAhom-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifArmenian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifBalinese-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifEthiopic-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifGeorgian-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifGujarati-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifGurmukhi-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifHebrew-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifKannada-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifKhmer-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifLao-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifMyanmar-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifSinhala-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifTamil-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifTangut-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifThai-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifTibetan-Regular.otf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoEmoji-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoKufiArabic-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoNaskhArabic-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansOriya-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSansTaiTham-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifBengali-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifDevanagari-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifMalayalam-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/noto/NotoSerifTelugu-Regular.ttf.o
+    OBJCOPY build/release/resources/fonts/sil/CharisSIL-Bold.cff.o
+    OBJCOPY build/release/resources/fonts/sil/CharisSIL-BoldItalic.cff.o
+    OBJCOPY build/release/resources/fonts/sil/CharisSIL-Italic.cff.o
+    OBJCOPY build/release/resources/fonts/sil/CharisSIL.cff.o
+    AR build/release/libmupdf.a
+    RANLIB build/release/libmupdf.a
+    CC build/release/thirdparty/lcms2/src/cmsalpha.o
+    CC build/release/thirdparty/lcms2/src/cmscam02.o
+    CC build/release/thirdparty/lcms2/src/cmscgats.o
+    CC build/release/thirdparty/lcms2/src/cmscnvrt.o
+    CC build/release/thirdparty/lcms2/src/cmserr.o
+    CC build/release/thirdparty/lcms2/src/cmsgamma.o
+    CC build/release/thirdparty/lcms2/src/cmsgmt.o
+    CC build/release/thirdparty/lcms2/src/cmshalf.o
+    CC build/release/thirdparty/lcms2/src/cmsintrp.o
+    CC build/release/thirdparty/lcms2/src/cmsio0.o
+    CC build/release/thirdparty/lcms2/src/cmsio1.o
+    CC build/release/thirdparty/lcms2/src/cmslut.o
+    CC build/release/thirdparty/lcms2/src/cmsmd5.o
+    CC build/release/thirdparty/lcms2/src/cmsmtrx.o
+    CC build/release/thirdparty/lcms2/src/cmsnamed.o
+    CC build/release/thirdparty/lcms2/src/cmsopt.o
+    CC build/release/thirdparty/lcms2/src/cmspack.o
+    CC build/release/thirdparty/lcms2/src/cmspcs.o
+    CC build/release/thirdparty/lcms2/src/cmsplugin.o
+    CC build/release/thirdparty/lcms2/src/cmsps2.o
+    CC build/release/thirdparty/lcms2/src/cmssamp.o
+    CC build/release/thirdparty/lcms2/src/cmssm.o
+    CC build/release/thirdparty/lcms2/src/cmstypes.o
+    CC build/release/thirdparty/lcms2/src/cmsvirt.o
+    CC build/release/thirdparty/lcms2/src/cmswtpnt.o
+    CC build/release/thirdparty/lcms2/src/cmsxform.o
+    CC build/release/thirdparty/mujs/one.o
+    AR build/release/libmupdf-third.a
+    RANLIB build/release/libmupdf-third.a
+    CC build/release/source/tools/mutool.o
+    CC build/release/source/tools/muconvert.o
+    CC build/release/source/tools/mudraw.o
+    CC build/release/source/tools/murun.o
+    CC build/release/source/tools/mutrace.o
+    CC build/release/source/tools/cmapdump.o
+    CC build/release/source/tools/pdfclean.o
+    CC build/release/source/tools/pdfcreate.o
+    CC build/release/source/tools/pdfextract.o
+    CC build/release/source/tools/pdfinfo.o
+    CC build/release/source/tools/pdfmerge.o
+    CC build/release/source/tools/pdfpages.o
+    CC build/release/source/tools/pdfposter.o
+    CC build/release/source/tools/pdfshow.o
+    CC build/release/source/tools/pdfsign.o
+    CC build/release/source/helpers/pkcs7/pkcs7-check.o
+    CC build/release/source/helpers/pkcs7/pkcs7-openssl.o
+source/helpers/pkcs7/pkcs7-openssl.c: In function 'BIO_new_stream':
+source/helpers/pkcs7/pkcs7-openssl.c:205:53: warning: passing argument 2 of 'BIO_meth_set_callback_ctrl' from incompatible pointer type [-Wincompatible-pointer-types]
+  205 |                 BIO_meth_set_callback_ctrl(methods, stream_callback_ctrl);
+      |                                                     ^~~~~~~~~~~~~~~~~~~~
+      |                                                     |
+      |                                                     long int (*)(BIO *, int,  void (*)(struct bio_st *, int,  const char *, int,  long int,  long int)) {aka long int (*)(struct bio_st *, int,  void (*)(struct bio_st *, int,  const char *, int,  long int,  long int))}
+In file included from /usr/include/openssl/err.h:122,
+                 from source/helpers/pkcs7/pkcs7-openssl.c:84:
+/usr/include/openssl/bio.h:357:12: note: expected 'long int (*)(BIO *, int,  int (*)(BIO *, int,  int))' {aka 'long int (*)(struct bio_st *, int,  int (*)(struct bio_st *, int,  int))'} but argument is of type 'long int (*)(BIO *, int,  void (*)(struct bio_st *, int,  const char *, int,  long int,  long int))' {aka 'long int (*)(struct bio_st *, int,  void (*)(struct bio_st *, int,  const char *, int,  long int,  long int))'}
+  357 |     long (*callback_ctrl)(BIO *, int, BIO_info_cb *));
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AR build/release/libmupdf-pkcs7.a
+    RANLIB build/release/libmupdf-pkcs7.a
+    CC build/release/source/helpers/mu-threads/mu-threads.o
+    AR build/release/libmupdf-threads.a
+    RANLIB build/release/libmupdf-threads.a
+    LINK build/release/mutool
+    CC build/release/source/tools/muraster.o
+    LINK build/release/muraster
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf
+install -m 644 include/mupdf/*.h /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf
+install -m 644 include/mupdf/fitz/*.h /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz
+install -m 644 include/mupdf/pdf/*.h /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/lib
+install -m 644 build/release/libmupdf.a build/release/libmupdf-third.a /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/lib
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/bin
+install -m 755 build/release/mutool build/release/muraster  /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/bin
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/man/man1
+install -m 644 docs/man/*.1 /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/man/man1
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf
+install -d /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples
+install -m 644 README COPYING CHANGES /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf
+install -m 644 docs/*.html docs/*.css docs/*.png /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf
+install -m 644 docs/examples/* /home/michael/.cache/kiss/proc/3997/pkg/libmupdf/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples
+-> libmupdf Successfully built package
+-> libmupdf Stripping binaries and libraries
+-> libmupdf Generating manifest
+-> libmupdf looking for dependencies (using readelf)
+--- depends
++++ -
+@@ -2,6 +2,7 @@
+ gumbo-parser
+ jbig2dec
+ libjpeg-turbo
++libressl
+ openjpeg2
+ pkgconf make
+ zlib
+-> libmupdf Generating manifest
+-> libmupdf Generating etcsums
+-> libmupdf Creating tarball
+-> libmupdf Successfully created tarball
+-> Install built packages? [libmupdf] 
+-> Continue?: Press Enter to continue or Ctrl+C to abort 
+-> Using 'ssu' (to become root) 
+-> libmupdf Checking if manifest valid
+-> libmupdf Checking if package installable
+-> libmupdf Checking for package conflicts
+-> libmupdf Installing package (libmupdf@1.18.0-2.tar.gz)
+-> libmupdf Installed successfully
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/bin/mutool': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/bin/muraster': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-show.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-merge.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/trace-device.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-merge.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/multi-threaded.c': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/bbox-device.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/example.c': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-create.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-extract-rich-media.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/draw-document.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/fix-s22pdf.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-dejpx.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/draw-device.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-trace.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-portfolio.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/pdf-create-lowlevel.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/jpx-to-pdf.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/examples/create-thumbnail.js': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-run.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/coding-style.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/ecosystem.png': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/building.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-clean.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/thirdparty.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mupdf-gl.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/coding-overview.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-extract.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-trace.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-draw.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/style.css': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/android-sdk.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/artifex-logo.png': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/index.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/coding-progressive.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/ecosystem.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/CHANGES': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-create.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/README': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/COPYING': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/template.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/doc/mupdf/manual-mutool-convert.html': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/man/man1/mutool.1': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/share/man/man1/mupdf.1': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/output-pdf.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/name-table.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/xref.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/annot.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/cmap.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/form.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/font.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/resource.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/document.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/interpret.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/javascript.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/clean.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/event.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/object.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/parse.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/crypt.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf/page.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/pdf.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/ucdn.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/text.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/outline.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/buffer.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/compressed-buffer.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/tree.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/util.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/system.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/output.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/version.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/context.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/config.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/bitmap.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/path.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/getopt.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/separation.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/geometry.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/color.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/structured-text.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/font.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/document.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/glyph.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/pixmap.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/shade.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/writer.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/archive.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/track-usage.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/log.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/link.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/compress.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/filter.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/band-writer.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/image.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/display-list.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/transition.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/device.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/output-svg.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/glyph-cache.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/string-util.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/xml.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/hash.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/store.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/write-pixmap.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/crypt.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/bidi.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/stream.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz/pool.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/fitz.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/include/mupdf/memento.h': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/lib/libmupdf-third.a': Permission denied
+rm: can't remove '/home/michael/.cache/kiss/proc/3997/pkg/libmupdf/usr/lib/libmupdf.a': Permission denied
