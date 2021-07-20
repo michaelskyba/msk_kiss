@@ -1,5 +1,5 @@
 gettext
 libxml2
-libressl
+openssl
 ncurses
 curl
