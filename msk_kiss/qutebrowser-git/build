@@ -1,7 +1,7 @@
 #!/bin/sh -e
 for py in py-attrs py-jinja py-markupsafe py-pygments py-pypeg py-yaml; do (
     cd "$py"
-    python3 setup.py build
+    python setup.py build
     python setup.py install --prefix=/usr --root="$1"
 ) done
 # Remove DBus dependency
@@ -14,5 +14,5 @@ sed -i "s/notification.init()/#notification.init()/" browser/webengine/webengine
 sed -i "s/if notification.bridge/#if notification.bridge/" browser/webengine/webenginesettings.py
 sed -i "s/notification.bridge.in/#notification.bridge.in/" browser/webengine/webenginesettings.py
 cd ..
-python3 setup.py build
-python3 setup.py install --prefix=/usr --root="$1"
+python setup.py build
+python setup.py install --prefix=/usr --root="$1"
