@@ -1,5 +1,4 @@
 #!/bin/sh -e
-
 ./configure \
     --prefix=/usr \
     --sysconfdir=/etc \
@@ -7,6 +6,5 @@
     --with-ssl \
     --with-zlib \
     --enable-ipv6
-
 make
 make DESTDIR="$1" install

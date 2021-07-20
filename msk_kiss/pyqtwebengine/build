@@ -1,8 +1,6 @@
 #!/bin/sh -e
 sip-build --no-make
-
 cd build
 make
-
 # idk, hopefully one of them works
 make -j1 INSTALL_ROOT="$1" DESTDIR="$1" install
