@@ -31,6 +31,7 @@ Don't take this is an accurate representation of my git commiting skills; due to
 - olm-git
 - gomuks-git
 	- I get a long set of "permission denied" errors for deleting cached files at the end of the build, and am not sure what's causing it - if you're familiar with Go, please offer some advice
+- btpd-git
 
 Forks with misc fixes
 - msmtp (openssl)

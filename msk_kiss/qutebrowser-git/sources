@@ -1,7 +1,7 @@
-git+https://github.com/qutebrowser/qutebrowser
-git+https://github.com/python-attrs/attrs py-attrs
-git+https://github.com/pallets/jinja/ py-jinja
-git+https://github.com/pallets/markupsafe py-markupsafe
-git+https://github.com/pygments/pygments py-pygments
+git+https://github.com/qutebrowser/qutebrowser.git
+git+https://github.com/python-attrs/attrs.git py-attrs
+git+https://github.com/pallets/jinja.git py-jinja
+git+https://github.com/pallets/markupsafe.git py-markupsafe
+git+https://github.com/pygments/pygments.git py-pygments
 https://files.pythonhosted.org/packages/f9/bd/10398e2c2d2070cc8a9c7153abfbd4ddb2895a2c52a32722ab8689e0cc7d/pyPEG2-2.15.2.tar.gz py-pypeg
-git+https://github.com/yaml/pyyaml py-yaml
+git+https://github.com/yaml/pyyaml.git py-yaml
