@@ -6,13 +6,15 @@
 TYPE=$1
 PKG=$2
 
+source /etc/profile
+
 case $TYPE in
-	pre-build) echo "$PKG" > $SHELLSCRIPT_ASSETS/kiss_build ;;
-	build-fail) echo "$PKG: build failed" > $SHELLSCRIPT_ASSETS/kiss_build ;;
+	pre-build) echo "$PKG" > $ASSETS_DIR/kiss_build ;;
+	build-fail) echo "$PKG: build failed" > $ASSETS_DIR/kiss_build ;;
 
 	# -f: no error if file doesn't exist
-	post-install) rm -f $SHELLSCRIPT_ASSETS/kiss_build ;;
-	post-build) rm -f $SHELLSCRIPT_ASSETS/kiss_build ;;
+	post-install) rm -f $ASSETS_DIR/kiss_build ;;
+	post-build) rm -f $ASSETS_DIR/kiss_build ;;
 esac
 
-# $HOME/source/shellscript/short/statusbar will then use kiss_build to display, using xsetroot
+# short/statusbar will then use kiss_build to display, using xsetroot
