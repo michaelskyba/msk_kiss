@@ -1,7 +1,13 @@
 # msk_kiss
 msk_kiss: My personal KISS repository
 
-Don't take this is an accurate representation of my git commiting skills; due to the highly informal nature of this, the commit history will be even sloppier than usual.
+Don't take this is an accurate representation of my git commiting skills; due to
+the highly informal nature of this, the commit history will be even sloppier than
+usual. Also, *do not expect high-quality packages*. The 100% first priority is 
+packaging things for _myself_, so I would recommend going in with the mindset of 
+"this package I found isn't going to build". At worst, you'll have a starting
+point for making your own package, and at best, you'll be pleasantly surprised with
+a working one.
 
 ## Currently 'working' packages (as of July 2021):
 - xcape-git
