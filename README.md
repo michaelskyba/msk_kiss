@@ -26,7 +26,6 @@ a working one.
 - py-sip
 - bombadillo-git
 - pyqt5 (I think)
-- gcolor3-git
 - pyqtwebengine
 - qutebrowser-git (finally)
 	- Credit to https://github.com/sdsddsd1, I used their packages as a base for qutebrowser and its dependencies
