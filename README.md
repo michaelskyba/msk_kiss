@@ -44,6 +44,9 @@ a working one.
 	./configure
 	su -c "make install"
 	```
+- elinks
+	This package was made by testuser, not me! It's only here to ensure that I
+	don't lose it between e.g. multiple installs.
 
 Forks with misc fixes
 - msmtp (openssl)

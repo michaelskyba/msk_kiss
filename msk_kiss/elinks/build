@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+export DESTDIR="$1"
+
+# Remove git requirement (used to add a build ID) and disable docs.
+sed -i -e "s/txt =.*/txt = '$2'/" -e "s/dirty =.*/dirty = ''/" -e "/subdir('doc')/d" \
+     meson.build
+
+meson \
+    --prefix=/usr \
+    -Dfsp=false \
+    -Dgpm=false \
+    -Didn=false \
+    -Dtre=false \
+   . output
+
+ninja -C output
+ninja -C output install
