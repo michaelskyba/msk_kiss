@@ -11,7 +11,7 @@ for dir in $dirs
 do
 	cd "$dir"
 
-	find_output=$(find -name "$1")
+	find_output=$(find . -name "$1")
 	[ $find_output ] && break
 done
 
