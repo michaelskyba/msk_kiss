@@ -10,6 +10,9 @@ point for making your own package, and at best, you'll be pleasantly surprised w
 a working one.
 
 ## Currently 'working' packages (as of July 2021):
+- sbase
+	The community sbase package but forked to keep sed.
+	The original unlinks it.
 - xcape-git
 - gettext
 - snownews-git (I think)
