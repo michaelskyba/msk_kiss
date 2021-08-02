@@ -56,16 +56,11 @@ Forks with misc fixes
 - lynx (openssl)
 - libmupdf (temporary failure)
 
-## Exports (binary packages):
-- llvm (backup)
-- nodejs (backup)
-- qt5-webengine (new)
-
 ## Scripts (kiss extensions)
 - kiss-new - a fork that adds some 'default(?)' commands to the build file
 	- if using, make sure /path/to/msk_kiss/scripts is before /usr/bin/ in your $PATH
 - kiss-source - quickly output the sources of a package
 - kiss-hook - you should probably just ignore this
 
-## My kernel configuration Tor some hardware
+## My kernel configuration for some hardware
 - hp-elitebook-8470p
