@@ -9,6 +9,7 @@ sed -i -e "s/txt =.*/txt = '$2'/" -e "s/dirty =.*/dirty = ''/" -e "/subdir('doc'
 meson \
     --prefix=/usr \
     -Dfsp=false \
+    -Dgemini=true \
     -Dgpm=false \
     -Didn=false \
     -Dtre=false \
