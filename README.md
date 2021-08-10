@@ -11,7 +11,7 @@ a working one.
 
 ## Notes
 - sbase
-	The community sbase package but forked to keep sed.
+	- The community sbase package but forked to keep sed.
 	The original unlinks it.
 - clipmenu-git (you need to use a few kiss alternatives to busybox)
 	- procps-ng for /usr/bin/pgrep
@@ -22,8 +22,8 @@ a working one.
 - gomuks-git
 	- I get a long set of "permission denied" errors for deleting cached files at the end of the build, and am not sure what's causing it - if you're familiar with Go, please offer some advice
 - w3l-git
-	It also depends on termcap, which I wasn't able to successfully package.
-	```sh
+	- It also depends on termcap, which I wasn't able to successfully package.
+	- ```sh
 	curl -O http://ftp.gnu.org/gnu/termcap/termcap-1.3.1.tar.gz
 	tar xf termcap-1.3.1.tar.gz
 	rm termcap-1.3.1.tar.gz
@@ -32,7 +32,7 @@ a working one.
 	su -c "make install"
 	```
 - elinks
-	This package was made by testuser, not me! It's only here to ensure that I
+	- This package was made by testuser, not me! It's only here to ensure that I
 	don't lose it between e.g. multiple installs.
 - libmupdf
 	- Upstream has some sort of issue ATM.
