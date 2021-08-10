@@ -23,7 +23,7 @@ a working one.
 	- I get a long set of "permission denied" errors for deleting cached files at the end of the build, and am not sure what's causing it - if you're familiar with Go, please offer some advice
 - w3l-git
 	- It also depends on termcap, which I wasn't able to successfully package.
-	- ```sh
+	```sh
 	curl -O http://ftp.gnu.org/gnu/termcap/termcap-1.3.1.tar.gz
 	tar xf termcap-1.3.1.tar.gz
 	rm termcap-1.3.1.tar.gz
